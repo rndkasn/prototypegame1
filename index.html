@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Endless Jumper</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <section id="menu-screen" class="screen active">
+      <div class="menu-card">
+        <div class="menu-heading">
+          <div>
+            <h1>Endless Jumper</h1>
+            <p class="subtitle"><marquee behavior="scroll" direction="left">DAPATKAN IWAKKKK!!!</marquee></p>
+          </div>
+          <div class="highscore-row">
+            <span>High Score</span>
+            <strong id="high-score">0</strong>
+          </div>
+        </div>
+
+        <div class="carousel-panel">
+          <button id="carousel-left" class="icon-button">‹</button>
+          <div class="carousel-view">
+            <div id="carousel" class="carousel"></div>
+          </div>
+          <button id="carousel-right" class="icon-button">›</button>
+        </div>
+
+        <div class="selected-character-card">
+          <img id="selected-character-image" src="assets/akmal.png" alt="Selected character" />
+          <strong id="selected-character-name">Akmal</strong>
+        </div>
+
+        <button id="start-button" class="primary-button">Start Game</button>
+      </div>
+    </section>
+
+    <section id="game-screen" class="screen">
+      <div class="hud">
+        <div class="hud-left">
+          <span>Score</span>
+          <strong id="score-value">0</strong>
+        </div>
+        <div class="hud-right">
+          <span>High</span>
+          <strong id="hud-high-score">0</strong>
+        </div>
+        <button id="pause-button" class="small-button">Pause</button>
+      </div>
+
+      <div class="game-frame">
+        <div id="game-area" class="game-area"></div>
+
+        <div id="meme-popup" class="meme-popup hidden">
+          <img id="meme-image" src="" alt="Meme" />
+        </div>
+
+        <div id="pause-overlay" class="overlay hidden">
+          <div class="overlay-card">
+            <h2>PAUSED</h2>
+            <button id="resume-button" class="primary-button">Resume</button>
+          </div>
+        </div>
+
+        <div id="gameover-overlay" class="overlay hidden">
+          <div class="overlay-card">
+            <img class="gameover-image" src="assets/download (1).jpg" alt="Game Over" />
+            <h2>Game Over</h2>
+            <p>Your score: <strong id="final-score">0</strong></p>
+            <p>Best score: <strong id="gameover-highscore">0</strong></p>
+            <div class="overlay-actions">
+              <button id="restart-button" class="primary-button">Restart</button>
+              <button id="back-button" class="secondary-button">Back to Menu</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <audio id="bgm-audio" src="assets/bgm.mp3" preload="auto" loop></audio>
+  <audio id="music-audio" src="assets/MUSIC.mp3" preload="auto" loop></audio>
+  <audio id="jump-audio" src="assets/jump.mp3" preload="auto"></audio>
+  <audio id="coin-audio" src="assets/coin.mp3" preload="auto"></audio>
+  <audio id="meme-audio" src="assets/woosh.mp3" preload="auto"></audio>
+  <audio id="boom-audio" src="assets/vine-boom.mp3" preload="auto"></audio>
+  <audio id="gameover-audio" src="assets/cat-laugh-meme-1.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
